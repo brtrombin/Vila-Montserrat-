@@ -889,8 +889,8 @@ const S17 = () => (
                                   overflow: "hidden" }}>
           <div style={{ height: 3, background: col }} />
           <img src={img} alt={name}
-               style={{ width: "100%", height: 140, objectFit: "cover",
-                        objectPosition: "center 20%", display: "block",
+               style={{ width: "100%", height: 160, objectFit: "cover",
+                        objectPosition: "center center", display: "block",
                         filter: "grayscale(8%)" }} />
           <div style={{ padding: "10px 10px" }}>
             <div className="mono" style={{ color: col, marginBottom: 4, fontSize: 10 }}>{role}</div>
