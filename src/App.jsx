@@ -874,32 +874,34 @@ const S17 = () => (
     <div className="title">Quem já tomou</div>
     <div className="subtitle">a decisão.</div>
     <Rule />
-    {[
-      [IMG_MY, C.green, "#f0f7f0", "#b0d8b0",
-       "PRIMEIROS DESBRAVADORES · MARÇO 2026",
-       "Menegotto & Yas", "R. Anita Garibaldi, 359",
-       "Os primeiros a desbravar o novo território. Já estão no bairro em março. A 250m dos co-fundadores."],
-      [IMG_BR, C.blue, "#f0f4f8", "#b0c8e0",
-       "CO-FUNDADORES & AGITADORES · ABRIL 2026",
-       "Bruno & Raquel", "R. Fabrício Pilar, 571",
-       "Cofundadores e agitadores da vila. Propuseram, convenceram, chegam em abril."],
-    ].map(([img, col, bg, brd, role, name, addr, desc]) => (
-      <div key={name} style={{ background: bg, border: `1px solid ${brd}`,
-                                overflow: "hidden", marginBottom: 14 }}>
-        <div style={{ height: 3, background: col }} />
-        <img src={img} alt={name}
-             style={{ width: "100%", height: 180, objectFit: "cover",
-                      objectPosition: "center 20%", display: "block",
-                      filter: "grayscale(8%)" }} />
-        <div style={{ padding: "12px 14px" }}>
-          <div className="mono" style={{ color: col, marginBottom: 5 }}>{role}</div>
-          <div style={{ fontFamily: "'Noto Serif',serif", fontSize: 17,
-                         fontWeight: 700, marginBottom: 3 }}>{name}</div>
-          <div className="mono" style={{ marginBottom: 8 }}>{addr}</div>
-          <p className="body" style={{ fontSize: 13, color: "#555" }}>{desc}</p>
+    <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10 }}>
+      {[
+        [IMG_MY, C.green, "#f0f7f0", "#b0d8b0",
+         "DESBRAVADORES · MAR 2026",
+         "Menegotto & Yas", "R. Anita Garibaldi, 359",
+         "Os primeiros a desbravar o novo território. A 250m dos co-fundadores."],
+        [IMG_BR, C.blue, "#f0f4f8", "#b0c8e0",
+         "CO-FUNDADORES · ABR 2026",
+         "Bruno & Raquel", "R. Fabrício Pilar, 571",
+         "Cofundadores e agitadores da vila. Propuseram, convenceram, chegam em abril."],
+      ].map(([img, col, bg, brd, role, name, addr, desc]) => (
+        <div key={name} style={{ background: bg, border: `1px solid ${brd}`,
+                                  overflow: "hidden" }}>
+          <div style={{ height: 3, background: col }} />
+          <img src={img} alt={name}
+               style={{ width: "100%", height: 140, objectFit: "cover",
+                        objectPosition: "center 20%", display: "block",
+                        filter: "grayscale(8%)" }} />
+          <div style={{ padding: "10px 10px" }}>
+            <div className="mono" style={{ color: col, marginBottom: 4, fontSize: 10 }}>{role}</div>
+            <div style={{ fontFamily: "'Noto Serif',serif", fontSize: 14,
+                           fontWeight: 700, marginBottom: 2 }}>{name}</div>
+            <div className="mono" style={{ marginBottom: 6, fontSize: 10 }}>{addr}</div>
+            <p className="body" style={{ fontSize: 11, color: "#555", lineHeight: 1.5 }}>{desc}</p>
+          </div>
         </div>
-      </div>
-    ))}
+      ))}
+    </div>
   </S>
 );
 
