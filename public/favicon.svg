@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <circle cx="50" cy="50" r="48" fill="none" stroke="#C8002A" stroke-width="4"/>
+  <circle cx="50" cy="50" r="38" fill="none" stroke="#C8002A" stroke-width="1.5"/>
+  <text x="50" y="65" text-anchor="middle" font-size="40" font-family="serif" fill="#C8002A">村</text>
+</svg>
